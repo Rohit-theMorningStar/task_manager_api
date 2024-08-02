@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Task Management</h1>
+  
+  <div id="task-form">
+    <h2>Create Task</h2>
+    <form id="create-task-form">
+      <input type="text" id="title" placeholder="Title" required />
+      <input type="text" id="description" placeholder="Description" />
+      <select id="status" required>
+        <option value="" disabled selected>Select Status</option>
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+  </div>
+
+  <div id="task-list">
+    <h2>Task List</h2>
+    <ul id="tasks"></ul>
+  </div>
+
+  <div id="task-update" style="display: none;">
+    <h2>Update Task</h2>
+    <form id="update-task-form">
+      <input type="hidden" id="update-task-id" />
+      <select id="update-status" required>
+        <option value="" disabled selected>Select Status</option>
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <button type="submit">Update Status</button>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
